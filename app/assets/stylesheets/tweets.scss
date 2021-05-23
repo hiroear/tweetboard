@@ -1,0 +1,45 @@
+.col-9 strong {
+  font-size: 1.35rem;
+}
+
+textarea {
+  width: 100%;
+  height: 8rem;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: rgb(139, 197, 255);
+  border-radius: 30px;
+  padding: 11px 25px;
+}
+
+input[type="submit"]:hover {
+  background: rgb(63, 159, 255);
+}
+
+
+.logout button[type="submit"] {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: rgba(49, 139, 153, 0.76);
+  border-radius: 30px;
+  padding: 9px 25px;
+}
+
+.logout button[type="submit"]:hover {
+  background: rgba(36, 94, 104, 0.76);
+}
+
+.logout a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+.logout a:hover {
+  color: #fff;
+}

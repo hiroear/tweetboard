@@ -1,0 +1,26 @@
+@import "tweets";
+
+.nav-menu {
+  list-style: none;
+  font-size: 1.20rem;
+  margin-top: 20px;
+}
+
+.nav-menu li {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.nav-menu a {
+  color: rgb(131, 127, 124);
+  display: block;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: rgb(83, 178, 233);
+}
+
+.nav-menu i {
+  color: rgb(56, 172, 240);
+}
