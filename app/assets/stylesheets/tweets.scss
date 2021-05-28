@@ -1,5 +1,11 @@
-.col-9 strong {
-  font-size: 1.35rem;
+strong {
+  font-size: 1.4rem;
+}
+
+.card-body h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 textarea {
@@ -7,39 +13,61 @@ textarea {
   height: 8rem;
 }
 
-input[type="submit"] {
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  background: rgb(139, 197, 255);
-  border-radius: 30px;
-  padding: 11px 25px;
+.edit_username {
+  color: rgba(90, 86, 86, 0.925);
+  font-size: 1.25rem;
 }
 
-input[type="submit"]:hover {
+.tweet_btn input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  background: rgb(132, 191, 250);
+  border-radius: 40px;
+  padding: 10px 25px;
+  margin-top: .3em;
+}
+.tweet_btn input[type="submit"]:hover {
   background: rgb(63, 159, 255);
+  color: #fff;
 }
 
-
-.logout button[type="submit"] {
-  border: none;
+.edit_tweet input[type="submit"] {
+  width: 22%;
   cursor: pointer;
+  color: rgb(243, 53, 148);
   font-weight: bold;
-  background: rgba(49, 139, 153, 0.76);
-  border-radius: 30px;
-  padding: 9px 25px;
-}
-
-.logout button[type="submit"]:hover {
-  background: rgba(36, 94, 104, 0.76);
+  background: #fff;
+  border-radius: 25px;
+  border-color: rgb(243, 53, 148);
+  padding: 8px;
+  margin: 10px 6px 0 0;
 }
 
 .logout a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 13px;
+  color: rgb(243, 53, 148);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 25px;
+  border-color: rgb(243, 53, 148);
+  padding: 6px 10px;
+  margin: 10px 6px 0 0;
+}
+.logout a:hover {
+  color: rgb(153, 54, 103);
 }
 
-.logout a:hover {
-  color: #fff;
+.border-bottom {
+  font-size: 0.85rem;
+  color: rgba(54, 50, 50, 0.705);
+}
+.border-bottom a {
+  color: rgba(54, 50, 50, 0.705);
+  text-decoration: none;
+}
+.border-bottom a:hover {
+  color: rgb(63, 159, 255);
 }
