@@ -6,6 +6,7 @@
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
+            <p style="color:red; font-size:14px;"><%= flash[:alert] %></p>
             <!-- <%= f.label :email %><br /> -->
             <%= f.email_field :email, class: 'form-control input-lg', placeholder: 'メールアドレス', autofocus: true, autocomplete: "email" %>
           </div>

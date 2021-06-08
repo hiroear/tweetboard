@@ -4,6 +4,7 @@
       <div class="card-body">
         <h1>ツイート編集</h1>
         <p class="edit_username mt-5 px-2"><%= current_user&.name %></p>
+        <p class="notice  d-flex justify-content-center"><%= notice %></p>
 
         <%= form_with model: @tweet do |form| %>
           <div class="form-group">
@@ -14,7 +15,8 @@
           </div>
         <% end %>
 
-        <%= link_to '戻る', tweets_path %>
+        <p><%= link_to 'ホームへ', tweets_path %></p>
+        <%= link_to 'マイツイートへ', tweets_mines_path %>
       </div>
     </div>
   </div>

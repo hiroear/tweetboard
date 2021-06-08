@@ -2,8 +2,7 @@
 
 .nav-menu {
   list-style: none;
-  font-size: 1.2rem;
-  margin-top: 20px;
+  font-size: 1.15rem;
 }
 .nav-menu li {
   padding: 10px;
@@ -95,4 +94,58 @@
 
 .login a {
   text-decoration: none;
+}
+
+.pagination {
+  justify-content:center;
+}
+.pagination>.current>a {
+  background-color: rgb(132, 191, 250);
+}
+.pagination>li>a {
+  border: none;
+  color: #696969;
+  font-size: 15px;
+}
+.pagination>.active>a.page-link {
+  border-radius: 20px;
+  background-color: rgb(132, 191, 250);
+}
+.pagination>li>a:hover {
+  border-radius: 20px;
+}
+
+.wrapper {
+  height: 8vh;
+  width: 50vw;
+  position: fixed;
+  background-color: #fff;
+}
+.nav-sp {
+  display: flex;
+  margin-left: 15px;
+}
+.nav-sp li {
+  padding-right: 8vh;
+}
+
+@media screen and (min-width:768px){
+  .nav-sp {
+    display: none;
+  }
+  .wrapper {
+    display: none;
+  }
+  .nav-pc {
+    display: block;
+    position: fixed;
+  }
+}
+@media screen and (max-width: 767px){
+  .nav-pc {
+    display: none;
+  }
+  .col-xs-12 {
+    margin-top: 30px;
+  }
 }

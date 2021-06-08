@@ -7,6 +7,10 @@ strong {
   font-weight: bold;
   text-align: center;
 }
+.card-body a{
+  color: rgba(90, 86, 86, 0.925);
+  text-decoration: none;
+}
 
 textarea {
   width: 100%;
@@ -70,4 +74,9 @@ textarea {
 }
 .border-bottom a:hover {
   color: rgb(63, 159, 255);
+}
+
+.notice {
+  color: rgb(243, 53, 148);
+  font-size: 16px;
 }

@@ -1,0 +1,9 @@
+<% if current_user.likes.find_by(tweet: tweet) %>
+  <%=link_to tweet_likes_path(tweet), method: :delete, remote: true do %>
+    <i class="fas fa-heart fa-lg" style="color: red;"></i>
+  <% end %>
+<% else %>
+  <%= link_to tweet_likes_path(tweet), method: :post, remote: true do %>
+    <i class="far fa-heart fa-lg"></i>
+  <% end %>
+<% end %>

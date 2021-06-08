@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="nav-sp">
+    <ul class="nav-menu nav-sp fa-ul">
+      <li><%= link_to tweets_path do %><i class="fas fa-li fa-home fa-2x"></i><% end %></li>
+      <li><%= link_to tweets_likes_path do %><i class="far fa-li fa-heart fa-2x"></i><% end %></li>
+      <li><%= link_to tweets_mines_path do %><i class="fab fa-li fa-twitter fa-2x"></i><% end %></li>
+    </ul>
+  </div>
+</div>
+
+<div class="logout d-flex justify-content-end">
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn" %>
+</div>
+
+<div class="col-md-3 mt-md-3">
+  <div class="nav-pc">
+    <ul class="nav-menu fa-ul">
+      <li><i class="fas fa-li fa-home fa-lg"></i><%= link_to 'ホーム', tweets_path %></li>
+      <li><i class="far fa-li fa-heart fa-lg"></i><%= link_to 'LIKES', tweets_likes_path %></li>
+      <li><i class="fab fa-li fa-twitter fa-lg"></i><%= link_to 'マイツイート', tweets_mines_path %></li>
+    </ul>
+  </div>
+</div>

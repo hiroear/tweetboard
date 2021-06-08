@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
 
   #GET /tweets  prefix:tweets
   def index
-    @tweets = Tweet.all.order(created_at: :desc)
+    @tweets = Tweet.order(created_at: :desc).page(params[:page]).per(15)
     @tweet = Tweet.new
   end
 
@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
     @tweet = current_user.tweets.build(tweet_params)
 
     if @tweet.save
-      redirect_to tweets_path, notice: "Tweet was successfully created."
+      redirect_to tweets_path
     else
       render :index, status: :unprocessable_entity
     end
@@ -25,7 +25,7 @@ class TweetsController < ApplicationController
   #PATCH or PUT  /tweets/id  prefix:tweet
   def update
     if @tweet.update(tweet_params)
-      redirect_to tweets_path, notice: "Tweet was successfully updated."
+      redirect_to request.referer, notice: 'ツイートが編集されました'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -34,7 +34,7 @@ class TweetsController < ApplicationController
   #DELETE  /tweets/id  prefix:tweet
   def destroy
     @tweet.destroy
-    redirect_to tweets_path, notice: "Tweet was successfully destroyed."
+    redirect_to tweets_path
   end
 
   private
