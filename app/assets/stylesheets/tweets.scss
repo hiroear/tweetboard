@@ -49,30 +49,16 @@ textarea {
   margin: 10px 6px 0 0;
 }
 
-.logout a {
-  color: rgb(243, 53, 148);
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-  background: #fff;
-  border-radius: 25px;
-  border-color: rgb(243, 53, 148);
-  padding: 6px 10px;
-  margin: 10px 6px 0 0;
-}
-.logout a:hover {
-  color: rgb(153, 54, 103);
-}
 
-.border-bottom {
+.links {
   font-size: 0.85rem;
   color: rgba(54, 50, 50, 0.705);
 }
-.border-bottom a {
+.links a {
   color: rgba(54, 50, 50, 0.705);
   text-decoration: none;
 }
-.border-bottom a:hover {
+.links a:hover {
   color: rgb(63, 159, 255);
 }
 

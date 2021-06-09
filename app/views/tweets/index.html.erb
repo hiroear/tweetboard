@@ -2,22 +2,25 @@
   <%= render 'layouts/nav' %>
 
   <div class="col-xs-12 col-md-9">
-  <p class="notice"><%= notice %></p>
+    <p class="notice"><%= notice %></p>
     <strong class="p-2">ホーム</strong>&emsp;こんにちは <%= current_user&.name %>さん
-      <div class="post mt-3">
-        <%= form_with model: @tweet do |form| %>
-          <div class="form-group">
-            <%= form.text_area :content, class: "form-control form-control-lg", placeholder: 'いまどうしてる？'%>
-          </div>
-          <div class="tweet_btn d-flex justify-content-end">
-            <%= form.submit 'ツイート', class: 'btn' %>
-          </div>
-        <% end %>
-      </div>
+    <div class="post mt-3">
+      <%= form_with model: @tweet do |form| %>
+        <div class="form-group">
+          <%= form.text_area :content, class: "form-control form-control-lg", placeholder: 'いまどうしてる？'%>
+        </div>
+        <div class="tweet_btn d-flex justify-content-end">
+          <%= form.submit 'ツイート', class: 'btn' %>
+        </div>
+      <% end %>
+    </div>
 
-      <div class="tweetboard">
-          <%= render 'layouts/tweetboard' %>
-      </div>
+    <div class="tweetboard">
+      <%= render 'layouts/tweetboard' %>
+    </div>
+
+    <div id="page_top"><%= link_to "",tweets_path %></div>
   </div>
+
   <%= paginate @tweets %>
 </div>

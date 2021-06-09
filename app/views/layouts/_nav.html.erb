@@ -1,10 +1,15 @@
-<div class="wrapper">
-  <div class="nav-sp">
-    <ul class="nav-menu nav-sp fa-ul">
-      <li><%= link_to tweets_path do %><i class="fas fa-li fa-home fa-2x"></i><% end %></li>
-      <li><%= link_to tweets_likes_path do %><i class="far fa-li fa-heart fa-2x"></i><% end %></li>
-      <li><%= link_to tweets_mines_path do %><i class="fab fa-li fa-twitter fa-2x"></i><% end %></li>
-    </ul>
+<div class="sp">
+  <div class="wrapper border-bottom d-flex justify-content-between">
+    <div class="nav-sp">
+      <ul class="nav-menu nav-sp fa-ul">
+        <li><%= link_to tweets_path do %><i class="fas fa-li fa-home fa-2x"></i><% end %></li>
+        <li><%= link_to tweets_likes_path do %><i class="far fa-li fa-heart fa-2x"></i><% end %></li>
+        <li><%= link_to tweets_mines_path do %><i class="fab fa-li fa-twitter fa-2x"></i><% end %></li>
+      </ul>
+    </div>
+    <div class="logout-sp">
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn" %>
+    </div>
   </div>
 </div>
 

@@ -2,7 +2,7 @@
   <% @tweets.each do |tweet|%>
     <tr><th colspan="3"><%= tweet.user&.name %></th></tr>
     <tr><td colspan="4"><%= simple_format(h(tweet.content)) %></td></tr>
-    <tr class="border-bottom">
+    <tr class="links border-bottom">
       <td id="<%= dom_id(tweet) %>">
         <%= render 'layouts/like', tweet: tweet %>
       </td>
