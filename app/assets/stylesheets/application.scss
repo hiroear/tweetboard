@@ -1,40 +1,25 @@
 @import "tweets";
 
-.nav-menu {
-  list-style: none;
-  font-size: 1.15rem;
-}
-.nav-menu li {
-  padding: 10px;
-  font-weight: bold;
-}
-.nav-menu a {
-  color: rgb(131, 127, 124);
-  display: block;
-  text-decoration: none;
-}
-.nav-menu a:hover {
-  color: rgb(83, 178, 233);
-}
-.nav-menu i {
-  color: rgb(56, 172, 240);
-}
-
+/* ログイン・新規登録・パスワード再発行・ツイート編集画面 */
 .card {
   margin-top: 80px;
   padding: 42px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .07);
 }
-.card-body h2 {
+.card-body h1 {
   font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
 }
-
+.card-body a{
+  color: rgba(90, 86, 86, 0.925);
+  text-decoration: none;
+}
 .field {
   margin-top: 27px;
 }
 
+/* ログインボタン */
 .login_actions input[type="submit"] {
   width: 100%;
   border: none;
@@ -50,6 +35,7 @@
   color: #fff;
 }
 
+/* ログイン画面・パスワード再発行画面の新規アカウント作成ボタン */
 .actions a {
   border: none;
   cursor: pointer;
@@ -62,6 +48,8 @@
 .actions a:hover {
   background: rgb(253, 120, 176);
 }
+
+/* 新規アカウント作成画面の登録ボタン */
 .signup_actions input[type="submit"] {
   border: none;
   cursor: pointer;
@@ -75,6 +63,7 @@
   background: rgb(253, 120, 176);
 }
 
+/* パスワードをお忘れですか？ メール送信ボタン */
 .forgot_your_password a {
   text-decoration: none;
   color: rgb(63, 159, 255);
@@ -92,10 +81,8 @@
   background:rgb(114, 151, 177);
 }
 
-.login a {
-  text-decoration: none;
-}
 
+/* kaminari */
 .pagination {
   justify-content:center;
 }
@@ -115,6 +102,8 @@
   border-radius: 20px;
 }
 
+
+/* PAGE TOP */
 #page_top{
   width: 115px;
   height: 95px;
@@ -160,6 +149,8 @@
   color: #3f98ef;
 }
 
+
+/* ログアウトボタン */
 .logout a {
   color: rgb(243, 53, 148);
   cursor: pointer;
@@ -174,6 +165,7 @@
 .logout a:hover {
   color: rgb(153, 54, 103);
 }
+/* ログアウトボタン(レスポンシブ) */
 .logout-sp {
   padding-top: 16px;
   background-color: #fff;
@@ -192,6 +184,28 @@
   color: rgb(153, 54, 103);
 }
 
+
+/* ナビゲーションメニュー */
+.nav-menu {
+  list-style: none;
+  font-size: 1.15rem;
+}
+.nav-menu li {
+  padding: 10px;
+  font-weight: bold;
+}
+.nav-menu a {
+  color: rgb(131, 127, 124);
+  display: block;
+  text-decoration: none;
+}
+.nav-menu a:hover {
+  color: rgb(83, 178, 233);
+}
+.nav-menu i {
+  color: rgb(56, 172, 240);
+}
+/* ナビゲーションメニュー(レスポンシブ) */
 .sp {
   top: 0;
   background-color: #fff;
@@ -212,6 +226,8 @@
   padding: 3px 56px 0 0;
 }
 
+
+/* メディアクエリ */
 @media screen and (min-width:768px){
   .sp {
     display: none;
