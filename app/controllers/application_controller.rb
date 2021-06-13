@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_basic_auth
-    return unless RAILS_ENV == 'production'
+    return unless ENV['RAILS_ENV'] == 'production'
     authenticate_or_request_with_http_basic do |name, password|
       name == ENV['BASIC_AUTH_NAME'] && password == ENV['BASIC_AUTH_PASSWORD']
     end
