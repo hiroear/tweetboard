@@ -1,25 +1,28 @@
 <div class="row mt-1 mb-3 px-sm-3 border">
+  <!-- ログアウトボタン・ナビゲーションメニュー -->
   <%= render 'layouts/nav' %>
 
+  <!--ツイートフォーム・タイムライン-->
   <div class="col-xs-12 col-md-9">
-    <p class="notice"><%= notice %></p>
-    <strong class="p-2">ホーム</strong>&emsp;こんにちは <%= current_user&.name %>さん
+    <p style="color: rgb(243, 53, 148);"><%= notice %></p>
+    <strong>ホーム</strong>&emsp;こんにちは <%= current_user&.name %>さん
 
+      <!--ツイート投稿フォーム・ボタン-->
       <%= form_with class:"mt-3", model: @tweet do |form| %>
         <div class="form-group">
           <%= form.text_area :content, class: "form-control form-control-lg", placeholder: 'いまどうしてる？'%>
-        </div>
-        <div class="tweet_btn d-flex justify-content-end">
-          <%= form.submit 'ツイート', class: 'btn' %>
+          <div class="d-flex justify-content-end">
+            <%= form.submit 'ツイート', class: 'btn' %>
+          </div>
         </div>
       <% end %>
 
-    <div class="tweetboard">
+      <!--タイムライン-->
       <%= render 'layouts/tweetboard' %>
-    </div>
 
-    <div id="page_top"><%= link_to "",tweets_path %></div>
   </div>
+
+  <div id="page_top"><%= link_to "",tweets_path %></div>
 
   <%= paginate @tweets %>
 </div>

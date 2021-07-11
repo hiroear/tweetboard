@@ -1,47 +1,34 @@
 <div class="row">
   <div class="col-md-6 offset-md-3">
-    <div class="card border-light login">
+    <div class="card border-light">
       <div class="card-body">
-        <h1>ログイン</h1>
+        <h2>ログイン</h2>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="field">
+          <div class="field mt-4 pt-1">
             <p style="color:red; font-size:14px;"><%= flash[:alert] %></p>
             <!-- <%= f.label :email %><br /> -->
             <%= f.email_field :email, class: 'form-control input-lg', placeholder: 'メールアドレス', autofocus: true, autocomplete: "email" %>
           </div>
 
-          <div class="field">
+          <div class="field mt-4 pt-1">
             <!-- <%= f.label :password %><br /> -->
             <%= f.password_field :password, class: 'form-control w-100', placeholder: 'パスワード',autocomplete: 'current-password' %>
           </div>
 
           <% if devise_mapping.rememberable? %>
-            <div class="field_remember_me">
+            <div class="field">
               <%= f.check_box :remember_me %>
-              <%= f.label :'パスワードを保存', class: 'small' %>
+              <%= f.label :remember_me, class: 'small' %>
             </div>
           <% end %>
 
-          <div class="login_actions mt-4">
+          <div class="login_actions">
             <%= f.submit 'ログイン' %>
           </div>
         <% end %>
 
-        <div class="forgot_your_password">
-          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-            <%= link_to "パスワードをお忘れですか？", new_password_path(resource_name), class: 'small' %><br />
-          <% end %>
-        </div>
-
-        <p class="small text-center mt-5">はじめての方はこちら</p>
-        <div class="actions">
-          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-            <%= link_to "新規アカウント作成", new_registration_path(resource_name), class: "btn btn-primary w-100" %><br />
-          <% end %>
-        </div>
-
-        <!-- <%= render "devise/shared/links" %> -->
+        <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>

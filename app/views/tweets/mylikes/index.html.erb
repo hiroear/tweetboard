@@ -3,15 +3,15 @@
   <%= render 'layouts/nav' %>
 
   <div class="col-md-9 col-xs-12 mt-md-3">
-    <strong>マイツイート</strong>
+    <strong>LIKES</strong>
 
-    <!--ツイート一覧-->
+    <!--LIKES一覧-->
     <div class="mt-4">
       <%= render 'layouts/tweetboard' %>
     </div>
   </div>
 
-  <div id="page_top"><%= link_to "",tweets_mines_path %></div>
+  <div id="page_top"><%= link_to "",tweets_mylikes_path %></div>
 
   <%= paginate @tweets %>
 </div>

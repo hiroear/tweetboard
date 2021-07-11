@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :tweets do
     resources :mines, only: %i[index]
-    resources :likes, only: %i[index]
+    resources :mylikes, only: %i[index]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

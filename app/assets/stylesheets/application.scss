@@ -1,29 +1,24 @@
 @import "tweets";
 
-/* ログイン・新規登録・パスワード再発行・ツイート編集画面 */
+/* 【共通】ログイン・新規登録・パスワード再発行・ツイート編集画面 */
 .card {
   margin-top: 80px;
   padding: 42px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .07);
 }
-.card-body h1 {
+.card-body h2 {
   font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
 }
-.card-body a{
-  color: rgba(90, 86, 86, 0.925);
-  text-decoration: none;
-}
-.field {
-  margin-top: 27px;
-}
 
 /* ログインボタン */
+.login_actions {
+  margin-top: 1.5rem;
+}
 .login_actions input[type="submit"] {
   width: 100%;
   border: none;
-  cursor: pointer;
   color: #fff;
   font-weight: bold;
   background: rgb(132, 191, 250);
@@ -32,27 +27,25 @@
 }
 .login_actions input[type="submit"]:hover {
   background: rgb(63, 159, 255);
-  color: #fff;
 }
 
-/* ログイン画面・パスワード再発行画面の新規アカウント作成ボタン */
-.actions a {
+/* ログイン画面・パスワード再発行画面の新規アカウント作成リンクボタン */
+.signup_to_link_actions a {
   border: none;
-  cursor: pointer;
   color: #fff;
   font-weight: bold;
   background: rgb(255, 166, 203);
   border-radius: 35px;
   padding: 8px 0;
 }
-.actions a:hover {
+.signup_to_link_actions a:hover {
   background: rgb(253, 120, 176);
+  color: #fff;
 }
 
 /* 新規アカウント作成画面の登録ボタン */
 .signup_actions input[type="submit"] {
   border: none;
-  cursor: pointer;
   color: #fff;
   font-weight: bold;
   background: rgb(255, 166, 203);
@@ -63,21 +56,16 @@
   background: rgb(253, 120, 176);
 }
 
-/* パスワードをお忘れですか？ メール送信ボタン */
-.forgot_your_password a {
-  text-decoration: none;
-  color: rgb(63, 159, 255);
-}
-.forgot_your_password_actions input[type="submit"] {
+/* パスワード再設定メール送信ボタン */
+.reset_password_actions input[type="submit"] {
   border: none;
-  cursor: pointer;
   color: #fff;
   font-weight: bold;
   background:rgb(145, 182, 206);
   border-radius: 35px;
   padding: 8px 0;
 }
-.forgot_your_password_actions input[type="submit"]:hover {
+.reset_password_actions input[type="submit"]:hover {
   background:rgb(114, 151, 177);
 }
 
@@ -86,37 +74,38 @@
 .pagination {
   justify-content:center;
 }
-.pagination>.current>a {
-  background-color: rgb(132, 191, 250);
-}
 .pagination>li>a {
   border: none;
   color: #696969;
   font-size: 15px;
 }
-.pagination>.active>a.page-link {
-  border-radius: 20px;
-  background-color: rgb(132, 191, 250);
-}
 .pagination>li>a:hover {
   border-radius: 20px;
+  color: #696969;
+}
+.pagination>.active>a.page-link {
+  border-radius: 20px;
+  background-color: rgb(82, 168, 253);
 }
 
 
 /* PAGE TOP */
 #page_top{
-  width: 115px;
-  height: 95px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   right: 0;
   bottom: 0;
-  opacity: 0.6;
+  background: #3f98ef;
+  opacity: 0.45;
+  border-radius: 50%;
+  margin: 0 27px 35px 0;
 }
 #page_top a{
   position: relative;
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 25px;
+  height: 50px;
   text-decoration: none;
 }
 #page_top a::before{
@@ -124,36 +113,22 @@
   font-weight: 900;
   content: '\f102';
   font-size: 25px;
-  color: #3f98ef;
+  color: #fff;
   position: absolute;
   width: 25px;
   height: 25px;
-  top: -40px;
+  top: -15px;
   bottom: 0;
   right: 0;
   left: 0;
   margin: auto;
   text-align: center;
-}
-#page_top a::after{
-  content: 'PAGE TOP';
-  font-size: 13px;
-  color: #fff;
-  position: absolute;
-  top: 45px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-  color: #3f98ef;
 }
 
 
 /* ログアウトボタン */
 .logout a {
   color: rgb(243, 53, 148);
-  cursor: pointer;
   font-size: 12px;
   font-weight: bold;
   background: #fff;
@@ -163,40 +138,37 @@
   margin: 10px 6px 0 0;
 }
 .logout a:hover {
-  color: rgb(153, 54, 103);
+  color: rgb(243, 53, 148);
+  background: rgb(253, 242, 247);
 }
-/* ログアウトボタン(レスポンシブ) */
-.logout-sp {
-  padding-top: 16px;
-  background-color: #fff;
-}
+/* スマホ画面用ログアウトボタン */
 .logout-sp a {
   width: 76px;
   color: rgb(243, 53, 148);
-  cursor: pointer;
   font-size: 10px;
   font-weight: bold;
   background: #fff;
   border-radius: 25px;
   border-color: rgb(243, 53, 148);
+  margin-top: 16px;
 }
 .logout-sp a:hover {
-  color: rgb(153, 54, 103);
+  color: rgb(243, 53, 148);
+  background: rgb(253, 242, 247);
 }
 
 
 /* ナビゲーションメニュー */
 .nav-menu {
-  list-style: none;
+  display: block;
   font-size: 1.15rem;
 }
 .nav-menu li {
-  padding: 10px;
+  padding: 10px 0px;
   font-weight: bold;
 }
 .nav-menu a {
   color: rgb(131, 127, 124);
-  display: block;
   text-decoration: none;
 }
 .nav-menu a:hover {
@@ -205,46 +177,60 @@
 .nav-menu i {
   color: rgb(56, 172, 240);
 }
-/* ナビゲーションメニュー(レスポンシブ) */
+/* スマホ用ナビゲーションメニュー */
 .sp {
   top: 0;
   background-color: #fff;
   width: 520px;
-  height: 62px;
   position: fixed;
 }
-.wrapper {
-  height: 62px;
-  background-color: #fff;
-}
 .nav-sp {
-  display: flex;
   margin-left: 15px;
-  background-color: #fff;
+  height: 62px;
 }
-.nav-sp li {
+.nav-menu-sp {
+  display: flex;
+}
+.nav-menu-sp li {
   padding: 3px 56px 0 0;
 }
 
 
-/* メディアクエリ */
+/*------------------------------------
+- メディアクエリ
+------------------------------------*/
+/*   PC ipad画面  */
 @media screen and (min-width:768px){
   .sp {
     display: none;
   }
   .nav-pc {
-    display: block;
     position: fixed;
   }
 }
+
+/*  スマホ画面  */
 @media screen and (max-width: 767px){
   .nav-pc {
+    display: none;
+  }
+  .logout a {
     display: none;
   }
   .col-xs-12 {
     margin-top: 75px;
   }
-  .logout a {
-    display: none;
-  }
+}
+
+
+/*------------------------------------
+- COLOR info
+------------------------------------*/
+
+.text-info {
+  color: #3da1ff !important;
+}
+
+a.text-info:hover, a.text-info:focus {
+  color: #026db4 !important;
 }

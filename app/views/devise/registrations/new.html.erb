@@ -1,22 +1,23 @@
 <div class="row">
   <div class="col-md-6 offset-md-3">
-    <div class="card border-light login">
+    <div class="card border-light">
       <div class="card-body">
-        <h1>アカウントを作成</h1>
+        <h2>アカウントを作成</h2>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
-          <div class="field">
+
+          <div class="field mt-4 pt-1">
             <!-- <%= f.label :name %><br />-->
             <%= f.text_field :name, class: "form-control", placeholder: 'ユーザーネーム', autofocus: true %>
           </div>
 
-          <div class="field">
+          <div class="field mt-4 pt-1">
             <!-- <%= f.label :email %><br /> -->
             <%= f.email_field :email, class: "form-control", placeholder: 'メールアドレス', autofocus: true, autocomplete: "email" %>
           </div>
 
-          <div class="field">
+          <div class="field mt-4 pt-1">
             <!-- <%= f.label :password %> -->
             <!-- <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -24,13 +25,13 @@
             <%= f.password_field :password, class: "form-control", placeholder: 'パスワード（半角英数6文字以上）', autocomplete: "new-password" %>
           </div>
 
-          <div class="field">
+          <div class="field mt-4 pt-1">
             <!-- <%= f.label :password_confirmation %><br /> -->
             <%= f.password_field :password_confirmation, class: "form-control", placeholder: 'パスワード（確認）', autocomplete: "new-password" %>
           </div>
 
           <div class="signup_actions mt-4">
-            <%= f.submit "登録する", class: "btn btn-primary w-100" %>
+            <%= f.submit "登録する", class: "btn w-100" %>
           </div>
         <% end %>
 

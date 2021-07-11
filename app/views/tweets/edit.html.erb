@@ -2,21 +2,22 @@
   <div class="col-md-8 offset-md-2">
     <div class="card">
       <div class="card-body">
-        <h1>ツイート編集</h1>
-        <p class="edit_username mt-5 px-2"><%= current_user&.name %></p>
-        <p class="notice  d-flex justify-content-center"><%= notice %></p>
+        <h2>ツイート編集</h2>
+        <p class="h5 text-secondary mt-5 mb-4"><%= current_user&.name %></p>
+        <p class="d-flex justify-content-center" style="color: rgb(243, 53, 148);"><%= notice %></p>
 
         <%= form_with model: @tweet do |form| %>
           <div class="form-group">
             <%= form.text_area :content, class: "form-control form-control-lg" %>
           </div>
-          <div class="edit_tweet d-flex justify-content-end">
+          <div class="edit_tweet_actions d-flex justify-content-end">
             <%= form.submit '編 集', class: 'btn' %>
           </div>
         <% end %>
 
-        <p><%= link_to 'ホームへ', tweets_path %></p>
-        <%= link_to 'マイツイートへ', tweets_mines_path %>
+        <%= link_to 'ホームへ', tweets_path, class: 'small text-decoration-none text-info' %>
+        <p><%= link_to 'マイツイートへ', tweets_mines_path, class: 'small text-decoration-none text-info' %></p>
+
       </div>
     </div>
   </div>

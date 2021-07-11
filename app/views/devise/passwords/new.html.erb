@@ -1,19 +1,19 @@
 <div class="row">
   <div class="col-md-6 offset-md-3">
-    <div class="card border-light login">
+    <div class="card border-light">
       <div class="card-body">
-        <h1>パスワード再発行</h1>
+        <h2>パスワード再発行</h2>
 
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
 
-          <div class="field">
+          <div class="field mt-4 pt-1">
             <!-- <%= f.label :email %><br /> -->
             <%= f.email_field :email, class: 'form-control', placeholder: 'メールアドレス', autofocus: true, autocomplete: "email" %>
           </div>
 
-          <div class="forgot_your_password_actions mt-4 mb-5">
-            <%= f.submit "メール送信", class: "btn btn-primary w-100" %>
+          <div class="reset_password_actions mt-4">
+            <%= f.submit "メール送信", class: "btn w-100" %>
           </div>
         <% end %>
 
