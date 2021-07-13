@@ -25,7 +25,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   # メールを送信するアドレス
-  config.mailer_sender = ENV["clan.fukoffice@gmail.com"]
+  config.mailer_sender = ENV["GOOGLE_MAIL_ADDRESS"]
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
