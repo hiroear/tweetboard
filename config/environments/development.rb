@@ -36,8 +36,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
 
-  # 開発環境でメールを送るためのホストの設定
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'floating-fjord-54087' }
 
   config.action_mailer.perform_caching = true
   config.action_mailer.delivery_method = :smtp
@@ -45,7 +44,7 @@ Rails.application.configure do
     :enable_starttls_auto => true,
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => 'smtp.gmail.com',
+    :domain => 'herokuapp.com',
     :user_name => ENV["GOOGLE_MAIL_ADDRESS"],
     :password => ENV["GOOGLE_MAILER_PASSWORD"],
     :authentication => 'login'
