@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '77f6f30417219c8a5989be8c587eea2e7c578380ccdb4c8eb7ab0bbec7789f4f2c62654c1ceaa9b12a1fba82cefcfd6256441a1da102d815f553b064ed7a8207'
+  # config.secret_key = 'acd81a9acbcf1c9ee3c87f38f770f0e29301e7e26da3dd58bd9504b25c77afd857a31a17bc149f925d1bc8ee0e00289dd00f10b608d33df5826fb647f6817501'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,7 +24,8 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  # メールを送信するアドレス
+  config.mailer_sender = ENV["clan.fukoffice@gmail.com"]
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -126,7 +127,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'fa12f1236c7e2bee1da888577a9cd740eb9f6e277f817a27d0ac0892e864ce18b15e67e5080d8bf7afb24642645378b7b49d3f4f43ddd4e39ee65fc342719683'
+  # config.pepper = 'db178c2e5ccb1f27ca64bc2d51ff4f883e53281b789f0d97670ac82c0f72459616400bb8fa56b9b0be578b590e9c14e9edf88004e7078ef7ee065a241e3b1968'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -219,16 +220,19 @@ Devise.setup do |config|
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  # config.reset_password_keys = [:email]
+  # パスワード再設定するためのキーカラム。
+  config.reset_password_keys = [:email]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
   # change their passwords.
+  # リセットパスワードキーを使ってパスワードをリセットできる時間間隔。
   config.reset_password_within = 6.hours
 
   # When set to false, does not sign a user in automatically after their password is
   # reset. Defaults to true, so a user is signed in automatically after a reset.
-  # config.sign_in_after_reset_password = true
+  #既定値はtrueで, リセットされた後に自動的にサインインする。
+  config.sign_in_after_reset_password = true
 
   # ==> Configuration for :encryptable
   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).
