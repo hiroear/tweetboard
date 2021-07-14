@@ -35,19 +35,19 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  host = 'https://floating-fjord-54087.herokuapp.com/'
-  config.action_mailer.default_url_options = { host: host }
-
   config.action_mailer.perform_caching = true
   config.action_mailer.delivery_method = :smtp
+  host = 'https://floating-fjord-54087.herokuapp.com/'
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => 'heroku.com',
+    :domain => 'gmail.com',
     :user_name => ENV["GOOGLE_MAIL_ADDRESS"],
     :password => ENV["GOOGLE_MAILER_PASSWORD"],
-    :authentication => 'login'
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
   # Print deprecation notices to the Rails logger.
