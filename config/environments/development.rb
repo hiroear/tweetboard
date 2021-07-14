@@ -35,8 +35,8 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-
-  config.action_mailer.default_url_options = { host: 'herokuapp.com' }
+  host = 'https://floating-fjord-54087.herokuapp.com/'
+  config.action_mailer.default_url_options = { host: host }
 
   config.action_mailer.perform_caching = true
   config.action_mailer.delivery_method = :smtp
@@ -44,7 +44,7 @@ Rails.application.configure do
     :enable_starttls_auto => true,
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => 'herokuapp.com',
+    :domain => 'heroku.com',
     :user_name => ENV["GOOGLE_MAIL_ADDRESS"],
     :password => ENV["GOOGLE_MAILER_PASSWORD"],
     :authentication => 'login'
