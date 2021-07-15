@@ -63,7 +63,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "tweetboard_production"
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = true
   config.action_mailer.delivery_method = :smtp
   host = 'https://floating-fjord-54087.herokuapp.com/'
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
@@ -74,8 +74,7 @@ Rails.application.configure do
     :domain => 'gmail.com',
     :user_name => ENV["GOOGLE_MAIL_ADDRESS"],
     :password => ENV["GOOGLE_MAILER_PASSWORD"],
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    :authentication => :plain
   }
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
